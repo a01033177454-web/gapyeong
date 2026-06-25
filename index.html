@@ -37,6 +37,54 @@
   .tag { font-size: 0.65rem; background: #e8f2ec; color: #2d5a3d; border-radius: 99px; padding: 2px 9px; font-weight: 500; }
   .tag.amber { background: #fef3e8; color: #a0622a; }
   .or { font-size: 0.7rem; color: #bbb; text-align: center; margin: 4px 0; }
+
+  /* 옵션 버튼 */
+  .option-btns { display: flex; flex-direction: column; gap: 7px; margin: 8px 0 4px; }
+  .option-btn {
+    display: flex; align-items: center; justify-content: space-between;
+    background: #f0f6ff; border: 1.5px solid #3a7bd5;
+    border-radius: 10px; padding: 9px 12px;
+    text-decoration: none; transition: background 0.15s;
+  }
+  .option-btn:hover { background: #ddeeff; }
+  .option-btn.amber { background: #fff5ee; border-color: #e07b39; }
+  .option-btn.amber:hover { background: #ffe8d6; }
+  .option-btn-left { display: flex; align-items: center; gap: 10px; }
+  .option-btn-num {
+    width: 24px; height: 24px; border-radius: 50%;
+    background: #3a7bd5; color: white;
+    font-size: 12px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .option-btn.amber .option-btn-num { background: #e07b39; }
+  .option-btn-name { font-size: 13px; font-weight: 700; color: #1e3d28; }
+  .option-btn-desc { font-size: 11px; color: #888; margin-top: 1px; }
+  .option-btn-arrow { font-size: 18px; color: #3a7bd5; font-weight: 700; }
+  .option-btn.amber .option-btn-arrow { color: #e07b39; }
+  .option-btns { display: flex; flex-direction: column; gap: 7px; margin-top: 8px; }
+  .option-btn {
+    display: flex; align-items: center; justify-content: space-between;
+    background: #2d5a3d; color: white;
+    border-radius: 10px; padding: 10px 14px;
+    text-decoration: none; font-family: 'Noto Sans KR', sans-serif;
+    transition: background 0.15s;
+  }
+  .option-btn:hover { background: #1e3d28; }
+  .option-btn.amber { background: #d4905a; }
+  .option-btn.amber:hover { background: #b87040; }
+  .option-btn-left { display: flex; align-items: center; gap: 8px; }
+  .option-btn-num {
+    width: 22px; height: 22px; border-radius: 50%;
+    background: rgba(255,255,255,0.25);
+    font-size: 11px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .option-btn-info {}
+  .option-btn-name { font-size: 0.83rem; font-weight: 700; }
+  .option-btn-desc { font-size: 0.68rem; opacity: 0.85; margin-top: 1px; }
+  .option-btn-arrow { font-size: 1rem; opacity: 0.7; }
   footer { text-align: center; padding: 1.2rem; font-size: 0.75rem; color: #aaa; background: #eef2eb; border-top: 1px solid #dde8d8; }
 
   .custom-marker { display: flex; flex-direction: column; align-items: center; cursor: pointer; }
@@ -107,16 +155,37 @@
       <div class="tl-item">
         <div class="tl-dot dot-amber"></div>
         <div class="tl-card">
-          <div class="tl-time">도착 후 · 체크인 전</div>
+          <div class="tl-time">도착 후 · 체크인 전 (시간 여유 있으면)</div>
           <div class="tl-main">☕ 카페 들르기</div>
-          <div class="tl-desc">카페608 또는 코미호미</div>
+          <div class="option-btns">
+            <a class="option-btn" href="https://m.blog.naver.com/woojuuu/224320209277" target="_blank">
+              <div class="option-btn-left">
+                <div class="option-btn-num">1</div>
+                <div class="option-btn-info">
+                  <div class="option-btn-name">카페608</div>
+                  <div class="option-btn-desc">펜션 바로 옆 📍</div>
+                </div>
+              </div>
+              <div class="option-btn-arrow">›</div>
+            </a>
+            <a class="option-btn" href="https://m.blog.naver.com/ellarin_/224238224855" target="_blank">
+              <div class="option-btn-left">
+                <div class="option-btn-num">2</div>
+                <div class="option-btn-info">
+                  <div class="option-btn-name">코미호미</div>
+                  <div class="option-btn-desc">펜션에서 차로 4분 🚗</div>
+                </div>
+              </div>
+              <div class="option-btn-arrow">›</div>
+            </a>
+          </div>
           <div class="tags"><span class="tag amber">선택 코스</span></div>
         </div>
       </div>
       <div class="tl-item">
         <div class="tl-dot dot-green"></div>
         <div class="tl-card">
-          <div class="tl-time">15:30까지</div>
+          <div class="tl-time">3:30 이용 시작 · 4:00 입실</div>
           <div class="tl-main">🏠 메종드힐 체크인</div>
           <div class="tl-desc">힐203 입실</div>
         </div>
@@ -155,9 +224,28 @@
         <div class="tl-card">
           <div class="tl-time">체크아웃 후 · 점심</div>
           <div class="tl-main">🍽️ 점심 식사</div>
-          <div class="tl-desc">쇠터닭갈비</div>
-          <div class="or">— 또는 —</div>
-          <div class="tl-desc">도선재 (양떼목장 방향 동선)</div>
+          <div class="option-btns">
+            <a class="option-btn amber" href="https://m.blog.naver.com/kyj9102kyj/224270237397" target="_blank">
+              <div class="option-btn-left">
+                <div class="option-btn-num">1</div>
+                <div class="option-btn-info">
+                  <div class="option-btn-name">쇠터닭갈비</div>
+                  <div class="option-btn-desc">어린이 간장닭갈비 · 어른 매운 철판닭갈비 👧🌶️</div>
+                </div>
+              </div>
+              <div class="option-btn-arrow">›</div>
+            </a>
+            <a class="option-btn amber" href="https://m.blog.naver.com/sad8789/224310433853" target="_blank">
+              <div class="option-btn-left">
+                <div class="option-btn-num">2</div>
+                <div class="option-btn-info">
+                  <div class="option-btn-name">도선재</div>
+                  <div class="option-btn-desc">한우떡갈비 · 냉면 · 곰탕 경치 좋은 한식당 🏞️</div>
+                </div>
+              </div>
+              <div class="option-btn-arrow">›</div>
+            </a>
+          </div>
           <div class="tags"><span class="tag amber">현장에서 결정</span></div>
         </div>
       </div>
