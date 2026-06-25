@@ -42,26 +42,24 @@
   .option-btns { display: flex; flex-direction: column; gap: 7px; margin: 8px 0 4px; }
   .option-btn {
     display: flex; align-items: center; justify-content: space-between;
-    background: #f0f6ff; border: 1.5px solid #3a7bd5;
+    background: #3a7bd5; border: none;
     border-radius: 10px; padding: 9px 12px;
     text-decoration: none; transition: background 0.15s;
   }
-  .option-btn:hover { background: #ddeeff; }
-  .option-btn.amber { background: #fff5ee; border-color: #e07b39; }
-  .option-btn.amber:hover { background: #ffe8d6; }
+  .option-btn:hover { background: #2e6bbf; }
+  .option-btn.amber { background: #e07b39; }
+  .option-btn.amber:hover { background: #c96d2f; }
   .option-btn-left { display: flex; align-items: center; gap: 10px; }
   .option-btn-num {
     width: 24px; height: 24px; border-radius: 50%;
-    background: #3a7bd5; color: white;
+    background: rgba(255,255,255,0.3); color: white;
     font-size: 12px; font-weight: 700;
     display: flex; align-items: center; justify-content: center;
     flex-shrink: 0;
   }
-  .option-btn.amber .option-btn-num { background: #e07b39; }
-  .option-btn-name { font-size: 13px; font-weight: 700; color: #1e3d28; }
-  .option-btn-desc { font-size: 11px; color: #888; margin-top: 1px; }
-  .option-btn-arrow { font-size: 18px; color: #3a7bd5; font-weight: 700; }
-  .option-btn.amber .option-btn-arrow { color: #e07b39; }
+  .option-btn-name { font-size: 13px; font-weight: 700; color: white; }
+  .option-btn-desc { font-size: 11px; color: rgba(255,255,255,0.8); margin-top: 1px; }
+  .option-btn-arrow { font-size: 18px; color: rgba(255,255,255,0.8); font-weight: 700; }
   .option-btns { display: flex; flex-direction: column; gap: 7px; margin-top: 8px; }
   .option-btn {
     display: flex; align-items: center; justify-content: space-between;
